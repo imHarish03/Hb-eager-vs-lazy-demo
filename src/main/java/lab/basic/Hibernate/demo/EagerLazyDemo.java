@@ -27,6 +27,10 @@ public class EagerLazyDemo {
 			// Display Instructor name
 			System.out.println("Instructor Name : " + instructor.getFirstName());
 			System.out.println("Display courses : " + instructor.getCourse());
+
+			// Loading Instructor Hobby on the requirement only
+			System.out.println(
+					"Load Instructor Detail- Hobby by Lazy Loading : " + instructor.getInstructorDetail().getHobby());
 			session.getTransaction().commit();
 
 		} catch (Exception e) {
